@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbfbfa;
+  color: #0a0a0a;
+  font-family: var(--font-montserrat);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #0f5c45;
+  color: #eaeaea;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eaeaea;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0b3d2e;
+  border-radius: 999px;
+}
+
+:focus-visible {
+  outline: 2px solid #0f5c45;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ================================
+   TEXT UTILITIES
+================================ */
+
+.eyebrow {
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+
+.seed-divider {
+  position: relative;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #0f5c45,
+    transparent
+  );
+}
+
+
+/* ================================
+   SIMPLE GLASS
+================================ */
+
+.glass {
+  background: rgba(10, 10, 10, 0.45);
+
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+}
+
+
+/* ================================
+   PREMIUM LIQUID GLASS
+================================ */
+
+.liquid-glass {
+
+  position: relative;
+  isolation: isolate;
+
+
+  /*
+    Surface transparente façon verre Apple
+  */
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.025) 45%,
+      rgba(0,0,0,0.10)
+    );
+
+
+  /*
+    Le flou permet de voir
+    les particules derrière
+  */
+  backdrop-filter:
+    blur(30px)
+    saturate(150%);
+
+  -webkit-backdrop-filter:
+    blur(30px)
+    saturate(150%);
+
+
+
+  border:
+    1px solid rgba(255,255,255,0.12);
+
+
+
+  box-shadow:
+
+    /* reflet intérieur haut */
+    inset 0 1px 1px
+      rgba(255,255,255,0.18),
+
+    /* profondeur */
+    0 25px 80px
+      rgba(0,0,0,0.30),
+
+    /* ombre douce */
+    0 10px 30px
+      rgba(0,0,0,0.15);
+}
+
+
+
+/*
+   Reflet lumineux du verre
+   (très léger pour éviter le rectangle blanc)
+*/
+
+.liquid-glass::before {
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:inherit;
+
+
+  background:
+
+    radial-gradient(
+      100% 60% at 10% 0%,
+      rgba(255,255,255,0.18),
+      transparent 60%
+    );
+
+
+  pointer-events:none;
+
+  z-index:-1;
+}
+
+
+
+/* ================================
+   DARK LIQUID GLASS
+   Pour Hero Zero To One
+================================ */
+
+.liquid-glass-dark {
+
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.06),
+      rgba(0,20,15,0.18) 45%,
+      rgba(0,0,0,0.20)
+    );
+
+
+}
+
+
+
+/* ================================
+   NAVBAR GLASS
+================================ */
+
+
+/*
+  Plus opaque volontairement :
+  la navbar passe sur fond clair
+  après le hero
+*/
+
+.liquid-glass-nav {
+
+
+  background:
+
+    linear-gradient(
+      155deg,
+      rgba(255,255,255,0.10),
+      rgba(18,24,21,0.72) 45%,
+      rgba(6,8,7,0.82)
+    );
+
+
+}
+
+
+
+/* ================================
+   TEXT BALANCE
+================================ */
+
+.text-balance {
+  text-wrap: balance;
+}
