@@ -5,16 +5,25 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   async headers() {
-    // Content-Security-Policy is set in `middleware.ts` instead of here:
-    // the App Router hydrates via inline `<script>` tags, which need a
-    // per-request nonce to run under a strict CSP. A static CSP (no nonce)
-    // can only allow inline scripts via 'unsafe-inline', which defeats
-    // the point of having a script-src policy at all. See middleware.ts
-    // for the full explanation.
+
+    const csp = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline'",
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' data:",
+      "font-src 'self' data:",
+      "connect-src 'self'",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "frame-ancestors 'none'",
+    ].join("; ");
+
     return [
       {
         source: "/:path*",
         headers: [
+          { key: "Content-Security-Policy", value: csp },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "DENY" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
@@ -27,5 +36,4 @@ const nextConfig = {
     ];
   },
 };
-
 export default nextConfig;
