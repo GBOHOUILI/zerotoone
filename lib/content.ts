@@ -528,7 +528,7 @@ export const encounters = [
     id: "6",
     name: "Robert AOUAD",
     role: "Directeur Général d'Isocel Telecom",
-    photo: "/images/encounters/robert.jpg",
+    photo: "/images/encounters/robert.png",
     caption:
       "Présenté par Réal Kitieu lors du WAPF, il nous a accordé sa confiance malgré un emploi du temps extrêmement chargé. Son désir sincère d'apporter son aide et de soutenir notre initiative est un formidable accélérateur.",
   },
