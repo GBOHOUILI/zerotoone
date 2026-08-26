@@ -16,11 +16,12 @@ export const departments: Department[] = [
 export type Job = {
   id: string;
   title: string;
-  department: string; // doit correspondre à un Department.id
+  department: string;
   location: string;
   type: "CDI" | "CDD" | "Freelance" | "Stage";
-  filiale?: string; // ex. "Zero To One Resto"
+  filiale?: string;
   summary?: string;
+  datePosted: string;
 };
 
 export const jobs: Job[] = [
@@ -31,6 +32,7 @@ export const jobs: Job[] = [
   //   location: "Cotonou · Hybride",
   //   type: "CDI",
   //   summary: "Construire et maintenir les plateformes SaaS du studio.",
+  // datePosted: "2026-08-26",
   // },
   // {
   //   id: "dev-mobile",
@@ -40,6 +42,7 @@ export const jobs: Job[] = [
   //   type: "CDI",
   //   filiale: "Zero To One Resto",
   //   summary: "L'application mobile de commande et de gestion pour les restaurants.",
+  // datePosted: "2026-08-26",
   // },
   // {
   //   id: "design-uiux",
@@ -48,6 +51,7 @@ export const jobs: Job[] = [
   //   location: "Cotonou · Hybride",
   //   type: "CDI",
   //   summary: "Concevoir des interfaces simples pour des produits utilisés au quotidien.",
+  // datePosted: "2026-08-26",
   // },
   // {
   //   id: "marketing-cm",
@@ -56,6 +60,7 @@ export const jobs: Job[] = [
   //   location: "Cotonou · Sur site",
   //   type: "CDI",
   //   summary: "Porter la voix de Zero To One et de ses filiales sur les réseaux.",
+  // datePosted: "2026-08-26",
   // },
   // {
   //   id: "marketing-growth",
@@ -65,6 +70,7 @@ export const jobs: Job[] = [
   //   type: "Freelance",
   //   filiale: "Mon Compagnon",
   //   summary: "Faire connaître Mon Compagnon auprès des familles concernées.",
+  // datePosted: "2026-08-26",
   // },
   // {
   //   id: "produit-pm",

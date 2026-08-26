@@ -129,16 +129,20 @@ export function buildOpenSourceToolJsonLd(tool: {
  * Person JSON-LD for a founder. Used on the About page, right next to the
  * visible team bios, so the markup matches what's actually on the page.
  */
-export function buildPersonJsonLd(founder: (typeof founders)[number]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: founder.name,
-    jobTitle: founder.jobTitle,
-    description: founder.description,
-    worksFor: { "@id": `${siteUrl}/#organization` },
-  };
-}
+ export function buildPersonJsonLd(person: {
+   name: string;
+   jobTitle: string;
+   description: string;
+ }) {
+   return {
+     "@context": "https://schema.org",
+     "@type": "Person",
+     name: person.name,
+     jobTitle: person.jobTitle,
+     description: person.description,
+     worksFor: { "@id": `${siteUrl}/#organization` },
+   };
+ }
 
 /**
  * SoftwareApplication JSON-LD for a real Zero To One product (e.g. "Zero To
@@ -170,10 +174,11 @@ export function buildJobPostingJsonLd(job: {
   type: string;
   summary?: string;
   filiale?: string;
+  datePosted: string;
 }) {
   const employmentTypeMap: Record<string, string> = {
     CDI: "FULL_TIME",
-    CDD: "CONTRACTOR",
+    CDD: "TEMPORARY",
     Freelance: "CONTRACTOR",
     Stage: "INTERN",
   };
@@ -183,8 +188,8 @@ export function buildJobPostingJsonLd(job: {
     "@type": "JobPosting",
     title: job.title,
     description: job.summary ?? job.title,
-    datePosted: new Date().toISOString().split("T")[0],
-    employmentType: employmentTypeMap[job.type] ?? "OTHER_UNSPECIFIED",
+    datePosted: job.datePosted,
+    employmentType: employmentTypeMap[job.type] ?? "OTHER",
     hiringOrganization: {
       "@type": "Organization",
       name: job.filiale ?? "Zero To One",
@@ -224,7 +229,7 @@ export function buildPartnerJsonLd(partner: { name: string; url: string }) {
     "@type": "Organization",
     name: partner.name,
     url: partner.url,
-    subjectOf: { "@id": `${siteUrl}/about#organization` },
+    subjectOf: { "@id": `${siteUrl}/#organization` },
   };
 }
 
@@ -238,7 +243,7 @@ export function buildServiceJsonLd(service: {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `${siteUrl}/services#${service.id}`,
+    "@id": `${siteUrl}/services#service-${service.id}`,
     name: service.title,
     description: service.summary,
     provider: { "@id": `${siteUrl}/#organization` },

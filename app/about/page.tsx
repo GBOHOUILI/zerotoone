@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import GlassPanel from "@/components/GlassPanel";
 import { GlyphOrbit } from "@/components/Glyphs";
@@ -676,12 +677,12 @@ export default function AboutPage() {
 
           <Reveal delay={0.14}>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
-              <a
+              <Link
                 href="/carrieres"
                 className="w-full rounded-full bg-forest px-8 py-3 text-center font-medium text-pearl transition hover:opacity-90 sm:w-auto"
               >
                 Voir les postes ouverts
-              </a>
+              </Link>
               <a
                 href="mailto:contact@zerotoone.bj"
                 className="w-full rounded-full border border-ink/15 px-8 py-3 text-center font-medium text-ink transition hover:bg-ink/5 sm:w-auto"
