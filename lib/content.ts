@@ -630,7 +630,7 @@ export const founderQuote =
 export const partners = [
   {
     name: "Planet Hoster",
-    logo: "/images/partners/logo_planet_hoster.png",
+    logo: "/images/partners/logo_planet_hoster.svg",
     url: "https://www.planethoster.com",
   },
     {
