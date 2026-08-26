@@ -8,17 +8,17 @@ const nextConfig = {
 
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' https://app.cal.com",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data:",
+      "img-src 'self' data: https://app.cal.com",
       "font-src 'self' data:",
-      "connect-src 'self'",
+      "connect-src 'self' https://app.cal.com https://api.cal.com",
+      "frame-src https://app.cal.com",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
       "frame-ancestors 'none'",
     ].join("; ");
-
     return [
       {
         source: "/:path*",
