@@ -41,7 +41,7 @@ export default function CalBooking() {
           buttonTextColor: "#eaeaea",
         });
         Cal.ns["15min"]("ui", {
-          theme: "auto",
+          theme: "dark",
           styles: { branding: { brandColor: "#0f5c45" } },
         });
       `}
