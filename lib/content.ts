@@ -377,7 +377,7 @@ export const pastWork = [
       "Sécurisé et testé avant chaque mise en production",
       "Partenariat d'hébergement avec PlanetHoster",
     ],
-    image: "/images/projects/infrastructure multi-tenant/1.png",
+    image: "/images/projects/Infrastructure_multi_tenant/1.png",
     // gallery: [null, null, null] as (string | null)[],
   },
 ];
