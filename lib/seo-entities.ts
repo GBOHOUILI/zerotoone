@@ -16,7 +16,7 @@
 
 import { contactInfo, flagshipServices, sectors } from "@/lib/content";
 
-export const siteUrl = "https://zerotoone.studio";
+export const siteUrl = "https://zerotoone.bj";
 
 export const founders = [
   {
@@ -85,7 +85,7 @@ export function buildOrganizationJsonLd() {
       name: f.name,
       jobTitle: f.jobTitle,
     })),
-    sameAs: [],
+    sameAs: ["https://www.linkedin.com/company/zerotoonebuild/"],
   };
 }
 
@@ -97,7 +97,7 @@ export function buildWebSiteJsonLd() {
     "@id": `${siteUrl}/#website`,
     name: "Zero To One",
     url: siteUrl,
-    inLanguage: "fr-FR",
+    inLanguage: "fr",
     publisher: { "@id": `${siteUrl}/#organization` },
   };
 }

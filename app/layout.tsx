@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CalBooking from "@/components/CalBooking";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import { ThemeColorProvider } from "@/lib/theme-color-context";
 import JsonLd from "@/components/seo/json-ld";
@@ -79,6 +80,7 @@ export default function RootLayout({
             <Footer />
           </SmoothScrollProvider>
         </ThemeColorProvider>
+        <CalBooking />
       </body>
     </html>
   );
