@@ -200,3 +200,65 @@ export function buildJobPostingJsonLd(job: {
     },
   };
 }
+
+
+export function buildEncounterJsonLd(encounter: {
+  name: string;
+  role: string;
+  caption: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: encounter.name,
+    jobTitle: encounter.role,
+    description: encounter.caption,
+  };
+}
+
+/** Organization JSON-LD — pour chaque partenaire, relié à Zero To One via
+    `subjectOf` pointant vers la page /about où le partenariat est décrit. */
+export function buildPartnerJsonLd(partner: { name: string; url: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: partner.name,
+    url: partner.url,
+    subjectOf: { "@id": `${siteUrl}/about#organization` },
+  };
+}
+
+/** Offer/Service JSON-LD — pour chaque service du catalogue (services et
+    flagshipServices), rattaché à l'Organization comme provider. */
+export function buildServiceJsonLd(service: {
+  id: string;
+  title: string;
+  summary: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${siteUrl}/services#${service.id}`,
+    name: service.title,
+    description: service.summary,
+    provider: { "@id": `${siteUrl}/#organization` },
+    areaServed: ["Afrique francophone", "International"],
+  };
+}
+
+export function buildProjectJsonLd(item: {
+  title: string;
+  category: string;
+  description: string;
+  slug: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "@id": `${siteUrl}/projects/${item.slug}`,
+    name: item.title,
+    about: item.category,
+    description: item.description,
+    creator: { "@id": `${siteUrl}/#organization` },
+  };
+}

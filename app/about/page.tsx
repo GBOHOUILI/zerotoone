@@ -8,7 +8,12 @@ import Partners from "@/components/Partners";
 import Encounters from "@/components/Encounters";
 import HeroColorSync from "@/components/HeroColorSync";
 import JsonLd from "@/components/seo/json-ld";
-import { buildPersonJsonLd, founders } from "@/lib/seo-entities";
+import {
+  buildPersonJsonLd,
+  buildEncounterJsonLd,
+  buildPartnerJsonLd,
+  founders,
+} from "@/lib/seo-entities";
 
 import {
   philosophyPoints,
@@ -85,6 +90,23 @@ export default function AboutPage() {
       {founders.map((founder) => (
         <JsonLd key={founder.name} data={buildPersonJsonLd(founder)} />
       ))}
+      {teamMembers.map((member) => (
+        <JsonLd
+          key={member.name}
+          data={buildPersonJsonLd({
+            name: member.name,
+            jobTitle: member.role,
+            description: member.bio,
+          })}
+        />
+      ))}
+      {encounters.map((e) => (
+        <JsonLd key={e.id} data={buildEncounterJsonLd(e)} />
+      ))}
+      {partners.map((p) => (
+        <JsonLd key={p.name} data={buildPartnerJsonLd(p)} />
+      ))}
+
       {/* HERO */}
       <HeroColorSync src="/images/about_hero_bg.jpg" />
       <section

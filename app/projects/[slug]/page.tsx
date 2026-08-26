@@ -9,7 +9,7 @@ import ProjectGallery from "@/components/ProjectGallery";
 import HeroColorSync from "@/components/HeroColorSync";
 import Breadcrumbs from "@/components/seo/breadcrumbs";
 import JsonLd from "@/components/seo/json-ld";
-import { buildOpenSourceToolJsonLd } from "@/lib/seo-entities";
+import { buildOpenSourceToolJsonLd, buildProjectJsonLd  } from "@/lib/seo-entities";
 
 export function generateStaticParams() {
   return pastWork.map((item) => ({ slug: item.slug }));
@@ -49,6 +49,7 @@ export default async function WorkDetailPage({
       {/* ------------------------------------------------------------------ */}
       {/* HERO                                                                */}
       {/* ------------------------------------------------------------------ */}
+      <JsonLd data={buildProjectJsonLd(item)} />
       {item.id === "zero-to-one-ai" && <JsonLd data={buildOpenSourceToolJsonLd(item)} />}
       <HeroColorSync src={item.image} />
 
