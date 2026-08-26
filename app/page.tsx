@@ -13,7 +13,14 @@ import {
   GlyphSignal,
   GlyphSprout,
 } from "@/components/Glyphs";
-import { model, products, sectors, services } from "@/lib/content";
+import {
+  model,
+  products,
+  sectors,
+  proofPoints,
+  services,
+  pastWork,
+} from "@/lib/content";
 
 export default function HomePage() {
   return (
@@ -128,6 +135,28 @@ export default function HomePage() {
             className="h-9 w-px bg-gradient-to-b from-pearl/70 to-transparent"
             style={{ animation: "bounceCue 1.8s ease-in-out infinite" }}
           />
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------------------- */}
+      {/* PROOF STRIP                                                       */}
+      {/* ---------------------------------------------------------------- */}
+      <section className="border-b border-ink/5 bg-paper px-5 py-14 sm:px-6 sm:py-16 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-2 gap-8 sm:gap-10 md:grid-cols-4">
+            {proofPoints.map((point, i) => (
+              <Reveal key={point.id} delay={i * 0.06}>
+                <div className="border-l-2 border-forest/30 pl-4">
+                  <p className="text-sm font-medium leading-snug text-ink">
+                    {point.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-graphite">
+                    {point.description}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -362,6 +391,64 @@ export default function HomePage() {
             <p className="mt-2 text-center text-xs text-pearl/35 md:hidden">
               Faites glisser pour découvrir →
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------------------- */}
+      {/* REALISATIONS — teaser                                             */}
+      {/* ---------------------------------------------------------------- */}
+      <section className="bg-ink px-5 py-20 text-pearl sm:px-6 sm:py-28 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <Reveal>
+                <p className="eyebrow text-green">Déjà livré</p>
+              </Reveal>
+              <Reveal delay={0.08}>
+                <h2 className="mt-4 max-w-lg text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
+                  Des idées, devenues des produits réels.
+                </h2>
+              </Reveal>
+            </div>
+            <Reveal delay={0.15}>
+              <Link
+                href="/projects"
+                className="text-sm font-medium text-pearl/70 underline decoration-green underline-offset-8 transition-colors hover:text-pearl"
+              >
+                Toutes nos réalisations →
+              </Link>
+            </Reveal>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-3">
+            {pastWork.slice(0, 3).map((item, i) => (
+              <Reveal key={item.slug} delay={i * 0.08}>
+                <Link
+                  href={`/projects/${item.slug}`}
+                  className="group block h-full overflow-hidden rounded-2xl border border-white/10 transition-all duration-500 hover:-translate-y-1 hover:border-green/40"
+                >
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-white/5">
+                    {item.image && (
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(min-width: 768px) 33vw, 100vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    )}
+                  </div>
+                  <div className="p-6">
+                    <p className="eyebrow text-pearl/40">{item.category}</p>
+                    <h3 className="mt-2 font-medium">{item.title}</h3>
+                    <span className="mt-3 inline-block text-sm text-pearl/50 transition-transform duration-300 group-hover:translate-x-1">
+                      Voir le projet →
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
