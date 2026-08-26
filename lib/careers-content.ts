@@ -33,7 +33,7 @@ export const jobs: Job[] = [
   //   summary: "Construire et maintenir les plateformes SaaS du studio.",
   // },
   // {
-  //   id: "dev-mobile",   
+  //   id: "dev-mobile",
   //   title: "Développeur·se Mobile (Flutter)",
   //   department: "dev",
   //   location: "Cotonou · Remote possible",
@@ -123,7 +123,7 @@ export const recruitmentSteps = [
 
 // Adresse utilisée pour les candidatures. Remplacez par une adresse dédiée
 // (ex. carrieres@zerotoone.africa) si vous en créez une.
-export const careersEmail = "zerotooneresto@gmail.com";
+export const careersEmail = "contact@zerotoone.bj";
 
 export function jobMailto(job: Job) {
   const subject = encodeURIComponent(`Candidature - ${job.title}`);

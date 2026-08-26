@@ -383,7 +383,7 @@ export const pastWork = [
 ];
 
 export const contactInfo = {
-  email: "zerotooneresto@gmail.com",
+  email: "contact@zerotoone.bj",
   phones: ["+229 01 63 77 65 05", "+229 01 90 97 49 73"],
   locality: "Cotonou",
   country: "Bénin",

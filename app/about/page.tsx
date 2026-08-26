@@ -661,7 +661,7 @@ export default function AboutPage() {
                 Voir les postes ouverts
               </a>
               <a
-                href="mailto:zerotooneresto@gmail.com"
+                href="mailto:contact@zerotoone.bj"
                 className="w-full rounded-full border border-ink/15 px-8 py-3 text-center font-medium text-ink transition hover:bg-ink/5 sm:w-auto"
               >
                 Construisons ensemble
