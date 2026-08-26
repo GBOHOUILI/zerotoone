@@ -278,7 +278,7 @@ export const pastWork = [
     description:
       "Une plateforme web conçue pour mettre en valeur les expériences de voyage proposées par Even Travel, inspirer les voyageurs, faciliter les réservations et offrir une expérience immersive autour de destinations uniques et authentiques.",
     details:
-      "Développé pour Even Travel, ce site présente les circuits, les séjours et les expériences touristiques de l'agence à travers une interface élégante et immersive. Il permet aux visiteurs de découvrir les différentes offres, de consulter les détails des destinations, de réserver facilement leur prochain voyage et de contacter l'équipe pour un accompagnement personnalisé. Pensé pour offrir une navigation fluide sur tous les appareils, le site associe design premium, storytelling visuel et performance afin de renforcer la crédibilité de la marque, d'améliorer son acquisition de clients et de transformer les visiteurs en voyageurs.",
+      "Even Travel proposait déjà des circuits et séjours de qualité, mais sa présence en ligne ne reflétait pas ce niveau d'exigence : impossible pour un visiteur de se projeter dans une destination, de comparer les offres ou de faire une demande sans passer par un appel téléphonique. Le site perdait des prospects avant même le premier contact.\n\nNous avons conçu une plateforme pensée comme une expérience de voyage à part entière : storytelling visuel fort pour chaque destination, parcours de réservation simplifié en quelques clics, et une interface pensée mobile-first vu que la majorité des visiteurs arrivent depuis les réseaux sociaux. L'objectif n'était pas de faire « un site de plus », mais un outil qui convertit la curiosité en demande de devis.\n\nRésultat : Even Travel dispose aujourd'hui d'une vitrine à la hauteur de son offre, avec un parcours de réservation qui capte les demandes directement, sans friction, et une image de marque renforcée auprès de sa cible.",
     highlights: [
       "Présentation immersive des destinations, circuits et expériences de voyage.",
       "Réservation simplifiée avec demandes de devis et prise de contact rapide.",
@@ -297,7 +297,7 @@ export const pastWork = [
     description:
       "Une plateforme numérique conçue pour rapprocher les familles de leurs proches âgés en les mettant en relation avec des aidants de confiance. Mon Compagnon facilite le suivi, la communication et l'accompagnement à domicile pour offrir plus de sérénité aux familles, où qu'elles se trouvent.",
     details:
-      "Développée pour répondre aux besoins des familles ayant des proches âgés, Mon Compagnon propose une solution complète de mise en relation avec des aidants qualifiés et vérifiés. La plateforme permet de réserver des services d'accompagnement à domicile, de suivre les interventions en temps réel grâce à des comptes-rendus, des photos et des notifications, tout en restant connecté avec ses proches via des appels vidéo. Conçue pour être moderne, intuitive et entièrement responsive, elle garantit une expérience sécurisée pour les familles, les aidants et les bénéficiaires, tout en contribuant à améliorer la qualité de vie des personnes âgées.",
+      "De nombreuses familles, en particulier celles vivant loin de leurs parents âgés, font face au même problème : comment s'assurer qu'un proche est bien accompagné au quotidien quand on ne peut pas être physiquement présent ? Les solutions existantes reposaient soit sur du bouche-à-oreille non vérifié, soit sur une absence totale de suivi une fois l'aidant trouvé.\n\nNous avons conçu Mon Compagnon comme une plateforme de confiance de bout en bout : mise en relation avec des aidants qualifiés et vérifiés, réservation en ligne, et surtout un suivi en temps réel qui rassure à distance — comptes-rendus, photos, notifications et appels vidéo directement dans l'application. Chaque fonctionnalité a été pensée pour répondre à une inquiétude concrète exprimée par les familles.\n\nRésultat : une plateforme qui transforme l'attente et l'incertitude en visibilité continue, avec un espace dédié pour les familles, les aidants et les bénéficiaires — et un paiement sécurisé qui fluidifie l'ensemble du parcours.",
     highlights: [
       "Mise en relation avec des aidants qualifiés et vérifiés pour un accompagnement à domicile en toute confiance.",
       "Suivi des interventions grâce aux comptes-rendus, photos, notifications, appels vidéo et rappels de médicaments.",
@@ -316,7 +316,7 @@ export const pastWork = [
     description:
       "Un site web institutionnel conçu pour valoriser les actions de la PGEC, renforcer sa visibilité, promouvoir ses initiatives en faveur du genre, de l'environnement et de la citoyenneté, et faciliter les échanges avec ses partenaires et les communautés.",
     details:
-      "Développé pour la Promotion du Genre, de l'Environnement et de la Citoyenneté (PGEC), ce site met en lumière les missions, les projets, les campagnes de sensibilisation et les activités de l'association. Il constitue un véritable espace d'information et de communication, permettant aux visiteurs de découvrir les engagements de la PGEC, de suivre son actualité, de consulter ses publications et de prendre contact avec l'organisation. Pensé pour être moderne, accessible et responsive, il renforce la présence numérique de l'association et contribue à accroître son impact auprès des citoyens, des partenaires et des institutions.",
+      "La PGEC menait des actions de terrain concrètes en faveur du genre, de l'environnement et de la citoyenneté, mais sans site web, ces actions restaient invisibles pour les partenaires potentiels et les institutions susceptibles de les soutenir. L'association avait besoin d'un espace pour exister numériquement et légitimer son travail.\n\nNous avons conçu un site institutionnel clair, structuré autour des missions, projets et campagnes de sensibilisation de l'association, avec un espace actualités pour garder une présence active dans le temps.\n\nRésultat : la PGEC dispose désormais d'un véritable espace d'information et de communication, accessible et responsive, qui renforce sa crédibilité auprès des citoyens, des partenaires et des institutions.",
     highlights: [
       "Présentation des missions, des projets et des activités de la PGEC.",
       "Actualités, campagnes de sensibilisation et publications régulièrement mises en avant.",
@@ -335,7 +335,7 @@ export const pastWork = [
     description:
       "Conçue et déployée de bout en bout par notre équipe : de la réservation à la gestion des événements, une plateforme SaaS complète en production.",
     details:
-      "FêteEasy est notre plateforme événementielle, pensée pour simplifier l'organisation d'événements de bout en bout : découverte de prestataires, réservation, suivi et gestion du jour J. Le projet a été conçu, développé et déployé intégralement par notre équipe, de l'architecture back-end à l'interface finale, et tourne aujourd'hui en production.",
+      "Organiser un événement — mariage, anniversaire, séminaire — implique de coordonner de nombreux prestataires dispersés, souvent joignables uniquement par téléphone ou bouche-à-oreille, sans visibilité claire sur les disponibilités ni sur le suivi des réservations. Pour les particuliers comme pour les prestataires, cette dispersion fait perdre du temps et de la fiabilité.\n\nNous avons construit FêteEasy comme une plateforme centralisée : découverte de prestataires, réservation en ligne et suivi de l'organisation jusqu'au jour J, le tout sur une architecture SaaS multi-tenant que nous avons conçue pour être réutilisable d'un projet à l'autre.\n\nRésultat : un produit entièrement pensé, développé et déployé en interne, aujourd'hui en production — la preuve que nous savons porter un SaaS de bout en bout, de l'architecture back-end jusqu'à l'expérience finale.",
     highlights: [
       "Réservation et gestion d'événements de bout en bout",
       "Architecture SaaS multi-tenant réutilisable",
@@ -353,7 +353,7 @@ export const pastWork = [
     description:
       "Notre outil open-source a dépassé 400 téléchargements de façon organique, sans aucune campagne marketing — adopté par la communauté.",
     details:
-      "zero-to-one-ai est notre outil open-source, publié pour la communauté technique. Sans aucune campagne marketing, il a dépassé 400 téléchargements de façon purement organique — une preuve concrète de la qualité de notre travail technique, au-delà des projets menés pour nos clients.",
+      "Beaucoup d'agences affirment maîtriser l'IA sans jamais publier de preuve technique vérifiable en dehors de leurs projets clients. Nous voulions démontrer notre expertise autrement : en publiant un outil utile, gratuitement, à la communauté technique.\n\nzero-to-one-ai a été conçu et publié en open-source, sans budget marketing ni campagne de promotion.\n\nRésultat : plus de 400 téléchargements de façon purement organique — une preuve concrète, vérifiable par n'importe qui, de la qualité de notre travail technique au-delà des projets menés pour nos clients.",
     highlights: [
       "+400 téléchargements organiques",
       "Aucune campagne marketing",
@@ -371,7 +371,7 @@ export const pastWork = [
     description:
       "Back-end multi-tenant sécurisé et testé, hébergé en partenariat avec PlanetHoster pour une fiabilité de niveau professionnel.",
     details:
-      "La base technique de nos projets SaaS : un back-end multi-tenant conçu, sécurisé et testé, réutilisable d'un projet à l'autre. Il est hébergé dans le cadre d'un partenariat stratégique avec PlanetHoster, ce qui nous permet de garantir à nos clients une fiabilité de niveau professionnel dès le lancement.",
+      "Chaque nouveau projet SaaS partant de zéro techniquement représente un risque : délais rallongés, architecture non éprouvée, failles de sécurité potentielles. Nous avons choisi d'investir en amont plutôt que de recommencer à chaque client.\n\nNous avons conçu un back-end multi-tenant sécurisé et testé, pensé pour être réutilisable d'un projet à l'autre, et l'avons couplé à un partenariat d'hébergement stratégique avec PlanetHoster.\n\nRésultat : nos clients bénéficient d'une fiabilité de niveau professionnel dès le lancement de leur produit, sans payer le coût ni le risque d'une architecture développée depuis zéro.",
     highlights: [
       "Architecture multi-tenant réutilisable",
       "Sécurisé et testé avant chaque mise en production",
@@ -636,7 +636,7 @@ export const partners = [
     {
     name: "Job Booster",
     logo: "/images/partners/logo_job_booster.png",
-    url: "https://www.planethoster.com",
+    url: "https://jobboosterbenin.com/",
   },
 
 ];
