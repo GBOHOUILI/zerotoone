@@ -163,3 +163,40 @@ export function buildSoftwareApplicationJsonLd(product: {
     publisher: { "@id": `${siteUrl}/#organization` },
   };
 }
+
+export function buildJobPostingJsonLd(job: {
+  title: string;
+  location: string;
+  type: string;
+  summary?: string;
+  filiale?: string;
+}) {
+  const employmentTypeMap: Record<string, string> = {
+    CDI: "FULL_TIME",
+    CDD: "CONTRACTOR",
+    Freelance: "CONTRACTOR",
+    Stage: "INTERN",
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: job.summary ?? job.title,
+    datePosted: new Date().toISOString().split("T")[0],
+    employmentType: employmentTypeMap[job.type] ?? "OTHER_UNSPECIFIED",
+    hiringOrganization: {
+      "@type": "Organization",
+      name: job.filiale ?? "Zero To One",
+      sameAs: siteUrl,
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: job.location,
+        addressCountry: "BJ",
+      },
+    },
+  };
+}

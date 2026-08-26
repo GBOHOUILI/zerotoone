@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import { GlyphOrbit } from "@/components/Glyphs";
 import JobsBoard from "@/components/JobsBoard";
+import JsonLd from "@/components/seo/json-ld";
+import { buildJobPostingJsonLd } from "@/lib/seo-entities";
 
 import { philosophyPoints } from "@/lib/content";
 import { departments, jobs, recruitmentSteps, careersEmail } from "@/lib/careers-content";
@@ -41,6 +43,9 @@ const whyJoinUs = [
 export default function CareersPage() {
   return (
     <>
+      {jobs.map((job) => (
+        <JsonLd key={job.id} data={buildJobPostingJsonLd(job)} />
+      ))}
       {/* HERO */}
       <section className="bg-ink px-5 pb-16 pt-28 text-pearl sm:px-6 sm:pb-20 sm:pt-32 md:px-10 md:pb-24 md:pt-40 lg:pt-48">
         <div className="mx-auto max-w-4xl">
