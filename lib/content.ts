@@ -511,7 +511,7 @@ export const encounters = [
   {
     id: "4",
     name: "Moïse Tchando KÉRÉKOU",
-    role: "Diplomate | Ambassadeur du Bénin en Turquie",
+    role: "Diplomate | Ex-Ambassadeur du Bénin en Turquie",
     photo: "/images/encounters/moise.jpg",
     caption:
       "Rencontré à la SAEB, il a pris le temps d'écouter notre vision et de nous soutenir en tant que jeunes entrepreneurs. Une belle dynamique de collaboration est engagée autour de plusieurs de ses projets d'envergure.",
@@ -630,7 +630,7 @@ export const founderQuote =
 export const partners = [
   {
     name: "Planet Hoster",
-    logo: "/images/partners/logo_planet_hoster.svg",
+    logo: "/images/partners/planethoster-wide_fr.B1QebMwL.png",
     url: "https://www.planethoster.com",
   },
     {
