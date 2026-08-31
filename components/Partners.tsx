@@ -30,7 +30,7 @@ export default function Partners({ items }: { items: Partner[] }) {
         fill
         sizes="(min-width: 768px) 25vw, 50vw"
         className="
-          object-cover
+          object-contain
           transition-transform
           duration-500
           group-hover:scale-105
