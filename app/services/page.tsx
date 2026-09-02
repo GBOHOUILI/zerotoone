@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Nos services",
   description:
-    "Ce que Zero To One livre, ce que ça coûte, et pourquoi. SaaS, agents IA, digitalisation de PME béninoises et community management, avec des tarifs clairs en FCFA et en euros.",
+    "Ce que Zero To One livre, et pourquoi c'est fait pour vous. SaaS, agents IA, digitalisation de PME béninoises et community management, pensés pour générer un vrai retour sur investissement.",
   alternates: {
     canonical: "/services",
   },
@@ -57,14 +57,16 @@ export default function ServicesPage() {
             <Reveal delay={0.08}>
               <h1 className="mt-5 text-balance text-3xl font-light leading-[1.12] sm:mt-6 sm:text-4xl md:text-5xl md:leading-[1.08]">
                 Ce que nous livrons,{" "}
-                <span className="font-semibold">ce que ça coûte, et pourquoi.</span>
+                <span className="font-semibold">et pourquoi c&apos;est fait pour vous.</span>
               </h1>
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mt-6 leading-relaxed text-pearl/70 sm:mt-8">
                 Vous n&apos;avez pas besoin de comprendre le code. Vous avez
-                besoin de résultats rapides, au juste prix. Chaque semaine passée sans le bon outil coûte du temps,
-                des clients et des opportunités. Plus vous attendez, plus ce coût augmente.
+                besoin d&apos;une équipe qui livre vite, qui livre bien, et qui
+                reste à vos côtés après la mise en ligne. Chaque semaine passée
+                sans le bon outil coûte du temps, des clients et des
+                opportunités. Plus vous attendez, plus ce coût augmente.
               </p>
             </Reveal>
           </GlassPanel>
@@ -82,6 +84,11 @@ export default function ServicesPage() {
               Nos solutions phares : ce qu&apos;elles vous apportent,
               concrètement.
             </h2>
+            <p className="mt-4 max-w-2xl leading-relaxed text-graphite">
+              Chaque projet est différent, donc chaque tarif l&apos;est aussi.
+              Après notre échange, vous recevez une proposition claire,
+              ajustée à votre projet et à ce qu&apos;il doit vous rapporter.
+            </p>
           </Reveal>
 
           <div className="mt-10 flex flex-col gap-6 sm:mt-16 sm:gap-8">
@@ -111,19 +118,14 @@ export default function ServicesPage() {
                           {offer.tagline}
                         </p>
 
-                        <div className="mt-6 grid grid-cols-1 gap-3 xs:grid-cols-2 sm:mt-8 sm:gap-4">
-                          <div className="rounded-xl bg-pearl/60 p-4 sm:rounded-2xl">
-                            <p className="eyebrow text-graphite">Bénin</p>
-                            <p className="mt-1.5 text-sm font-medium text-ink">
-                              {offer.priceBenin}
-                            </p>
-                          </div>
-                          <div className="rounded-xl bg-pearl/60 p-4 sm:rounded-2xl">
-                            <p className="eyebrow text-graphite">International</p>
-                            <p className="mt-1.5 text-sm font-medium text-ink">
-                              {offer.priceIntl}
-                            </p>
-                          </div>
+                        <div className="mt-6 sm:mt-8">
+                          <a
+                            href="/contact"
+                            className="inline-flex items-center gap-2 text-sm font-medium text-forest transition-colors hover:text-forest/80"
+                          >
+                            Discuter de ce projet
+                            <span aria-hidden="true">→</span>
+                          </a>
                         </div>
                       </div>
 
@@ -202,23 +204,19 @@ export default function ServicesPage() {
 
           <Reveal delay={0.1}>
             <div className="mt-8 overflow-hidden rounded-2xl border border-ink/10 bg-white sm:mt-12 sm:rounded-3xl">
-              <div className="hidden grid-cols-[1fr_auto_1.4fr] gap-6 border-b border-ink/10 px-6 py-4 sm:px-8 md:grid">
+              <div className="hidden grid-cols-[1fr_1.4fr] gap-6 border-b border-ink/10 px-6 py-4 sm:px-8 md:grid">
                 <span className="eyebrow text-graphite">Service</span>
-                <span className="eyebrow text-graphite">Prix (Bénin)</span>
                 <span className="eyebrow text-graphite">Ce que ça vous apporte</span>
               </div>
               <ul>
                 {serviceCatalog.map((row, i) => (
                   <li
                     key={row.id}
-                    className={`grid grid-cols-1 gap-2 px-6 py-4 sm:px-8 sm:py-5 md:grid-cols-[1fr_auto_1.4fr] md:items-center md:gap-6 ${
+                    className={`grid grid-cols-1 gap-2 px-6 py-4 sm:px-8 sm:py-5 md:grid-cols-[1fr_1.4fr] md:items-center md:gap-6 ${
                       i !== serviceCatalog.length - 1 ? "border-b border-ink/5" : ""
                     }`}
                   >
                     <span className="font-medium text-ink">{row.name}</span>
-                    <span className="text-sm text-forest md:text-right">
-                      {row.price}
-                    </span>
                     <span className="text-sm text-graphite">{row.benefit}</span>
                   </li>
                 ))}
